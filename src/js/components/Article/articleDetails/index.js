@@ -1,9 +1,11 @@
 import React, { Component} from 'react'
-import { withStyles } from '@material-ui/core/styles'
+import  withStyles  from '@material-ui/core/styles/withStyles'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart,faPlus } from '@fortawesome/free-solid-svg-icons'
+import faHeart from '@fortawesome/free-solid-svg-icons/faHeart'
+import faPlus from '@fortawesome/free-solid-svg-icons/faPlus'
+
 import { Redirect } from 'react-router-dom'
 
 import { Authenticate } from '../../../common/components/hoc/authenticate'

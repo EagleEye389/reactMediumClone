@@ -1,7 +1,7 @@
 import React, { Component} from 'react'
 import classnames from 'classnames'
 import { connect } from 'react-redux'
-import { withStyles } from '@material-ui/core/styles'
+import  withStyles  from '@material-ui/core/styles/withStyles'
 import { bindActionCreators } from 'redux'
 import { Redirect } from 'react-router-dom'
 

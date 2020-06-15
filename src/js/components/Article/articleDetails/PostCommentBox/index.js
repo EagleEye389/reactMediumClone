@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { withStyles } from '@material-ui/core/styles'
+import  withStyles  from '@material-ui/core/styles/withStyles'
 import { bindActionCreators } from 'redux'
 import { NavLink } from 'react-router-dom'
 import {connect} from 'react-redux'

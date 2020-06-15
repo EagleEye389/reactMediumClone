@@ -1,5 +1,5 @@
 import React from 'react'
-import { withStyles } from '@material-ui/core/styles'
+import  withStyles  from '@material-ui/core/styles/withStyles'
 import style from './style'
 
 const ArticleTemplate = ({classes, isEdit, title, description, body, tagList, handler, submitHandler }) => {

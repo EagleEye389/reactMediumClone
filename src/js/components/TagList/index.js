@@ -1,7 +1,7 @@
 import React, { Component} from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { withStyles } from '@material-ui/core/styles'
+import  withStyles  from '@material-ui/core/styles/withStyles'
 import { Redirect } from 'react-router-dom'
 
 import { Authenticate } from '../../common/components/hoc/authenticate' 
