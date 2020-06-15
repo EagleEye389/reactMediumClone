@@ -23,8 +23,8 @@
    app.listen(port, () => console.log("Listening on Port", port)) 
   ```
   > Final output is delivered in dist folder by webpack and same we are mentioning in server file.
-  # Add following in package.json file in script tag: 
-   ```node 
+  # Add following in package.json file in script tag
+    ```node 
      scripts: {
             dev-server: webpack-dev-server --open,
             start: webpack -p && node server.js,
