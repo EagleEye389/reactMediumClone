@@ -7,9 +7,9 @@
 # Deployed this application on Heroku
  > https://mediumtoshareideas.herokuapp.com/
 ## Steps I have followed 
-> Need to create a server file which can serve our final content.
-> We cannot use webpack-dev-server to deploy the things.
-> Install express use this command
+> Need to create a server file which can serve our final content.\
+> We cannot use webpack-dev-server to deploy the things.\
+> Install express use this command\
     ``sh 
       npm i -s express
     ``
@@ -24,28 +24,28 @@
   ```
   > Final output is delivered in dist folder by webpack and same we are mentioning in server file.
   # Add following in package.json file in script tag
-    ```node 
+    ``
        "scripts": {
         "dev-server": "webpack-dev-server --open",
         "start": "webpack -p && node server.js",
         "build": "webpack -p",
         "heroku-postbuild": "npm run build"
-     } ```
-   > Commit everything in git.
-   >  Install heroku cli
-   >  Login in heroku
-   >   Create git in heroku :  
+     } ``
+   > Commit everything in git.\
+   >  Install heroku cli\
+   >  Login in heroku\
+   >   Create git in heroku :  \
      ```sh heroku create application_name```
-   >   Now push to heroku git.
+   >   Now push to heroku git.\
      ```sh git push heroku master```
-   >   Application deployed on heroku in case any issue the check on heroku cli
+   >   Application deployed on heroku in case any issue the check on heroku cli\
 
 # Heroku login
  > ``sh 
     heroku login
     ``
 ## Heroku apps 
- >  It will provide application name which are running in heroku
+ >  It will provide application name which are running in heroku\
    ``sh 
     heroku apps
     ``
