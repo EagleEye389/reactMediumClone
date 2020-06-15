@@ -46,11 +46,11 @@
     heroku login
     ``
 ## Heroku apps 
- >  It will provide application name which are running in heroku\
+ -  It will provide application name which are running in heroku
    ```sh 
       heroku apps
     ```
-  > Heroku Logs \
+  - Heroku Logs
   ```sh 
    heroku logs --tail --app application_name
    ```
