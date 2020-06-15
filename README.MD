@@ -5,7 +5,7 @@
  > https://github.com/gothinkster/realworld/blob/master/api by
 
 # Deployed this application on Heroku
- > https://evening-dusk-71833.herokuapp.com/
+ > https://mediumtoshareideas.herokuapp.com/
 ## Steps I have followed 
 > Need to create a server file which can serve our final content.
 > We cannot use webpack-dev-server to deploy the things.
@@ -41,12 +41,12 @@
      ``git push heroku master``
  >   Application deployed on heroku in case any issue the check on heroku cli
 
-##Heroku login
+# Heroku login
  > ``sh 
     heroku login
     ``
-##eroku apps 
-  >  It will provide application name which are running in heroku
+## Heroku apps 
+ >  It will provide application name which are running in heroku
    ``sh 
     heroku apps
     ``
@@ -55,6 +55,6 @@
    heroku logs --tail --app application_name
    ``
 
-#If any suggestion or bug kindly report on the 
+# If any suggestion or bug kindly report on the 
 > deepak15.gupta15@gmail.com
 
