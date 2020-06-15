@@ -13,32 +13,31 @@
     ``sh 
       npm i -s express
     ``
- #Create a server.js file at root level and paste below content in it
-   ``node 
+ # Create a server.js file at root level and paste below content in it
+   ```node 
    const express = require('express')
    const app = express()
    const path = require('path')
    const port = process.env.PORT || 3001
    app.use(express.static(path.join(__dirname, 'dist')))
    app.listen(port, () => console.log("Listening on Port", port)) 
-  ``
+  ```
   > Final output is delivered in dist folder by webpack and same we are mentioning in server file.
-  #Add following in package.json file in script tag: 
-   ``node 
+  # Add following in package.json file in script tag: 
+   ```node 
      scripts: {
             dev-server: webpack-dev-server --open,
             start: webpack -p && node server.js,
             build: webpack -p,
-            heroku-postbuild: "npm run build
-     }
-     ``
- >  Commit everything in git.
+            heroku-postbuild: npm run build
+     } ```
+ > Commit everything in git.
  >  Install heroku cli
  >  Login in heroku
  >   Create git in heroku :  
-     ``heroku create application_name``
+     ```heroku create application_name```
  >   Now push to heroku git.
-     ``git push heroku master``
+     ```git push heroku master```
  >   Application deployed on heroku in case any issue the check on heroku cli
 
 # Heroku login
