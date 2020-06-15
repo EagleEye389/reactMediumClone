@@ -79,6 +79,7 @@ class App extends Component {
              <Route path="/articleEditor/:slug" render={(props) => <EditArticle {...props}  isEdit={true}/>} />
              <Route path="/profile" component={Profile} />
              <Route exact path="/userProfile/:username" component={UserProfile} />
+             <Redirect to='/' />
            </Switch>
            </Suspense>
            </div>
