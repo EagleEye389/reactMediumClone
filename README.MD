@@ -1,5 +1,5 @@
 # Application is created using react js .
-> ```sh npm run dev-server```   =>  To launch the application.
+   ```npm run dev-server```
 
 # We are using the api exposed by gothinkster project.
  > https://github.com/gothinkster/realworld/blob/master/api by
@@ -7,12 +7,10 @@
 # Deployed this application on Heroku
  > https://mediumtoshareideas.herokuapp.com/
 ## Steps I have followed 
-- Need to create a server file which can serve our final content.\
-- We cannot use webpack-dev-server to deploy the things.\
-- Install express use this command\
-    ``sh 
-      npm i -s express
-    ``
+- Need to create a server file which can serve our final content.
+- We cannot use webpack-dev-server to deploy the things.
+- Install express use this command
+    ```npm i -s express```
  # Create a server.js file at root level and paste below content in it
    ```node 
    const express = require('express')
@@ -36,24 +34,18 @@
    -  Install heroku cli
    -  Login in heroku
    -   Create git in heroku :  
-     ```sh heroku create application_name```
+     ```heroku create application_name```
    -   Now push to heroku git.
-     ```sh git push heroku master```
-   -   Application deployed on heroku in case any issue the check on heroku cli\
+      ```git push heroku master```
+   -   Application deployed on heroku in case any issue the check on heroku cli
 
 # Heroku login
- > ``sh 
-    heroku login
-    ``
+  ```heroku login```
 ## Heroku apps 
  -  It will provide application name which are running in heroku
-   ```sh 
-      heroku apps
-    ```
+     ```heroku apps```
   - Heroku Logs
-  ```sh 
-   heroku logs --tail --app application_name
-   ```
+    ```heroku logs --tail --app application_name```
 
 # If any suggestion or bug kindly report on the 
 > deepak15.gupta15@gmail.com
