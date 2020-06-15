@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode production"
+    "dev-server": "webpack-dev-server --open",
+    "start": "node server.js",
+    "build": "webpack -p",
+    "heroku-postbuild": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -33,6 +35,7 @@
     "@material-ui/core": "^4.10.0",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "history": "^4.10.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
