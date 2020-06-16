@@ -8,6 +8,7 @@ const style = () => ({
       flexWrap: 'wrap',
       flexDirection: 'column',
       minHeight: '500px',
+      alignItems: 'center'
     },
     page: {
       display: 'flex',

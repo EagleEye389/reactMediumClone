@@ -34,6 +34,12 @@ const styles = () => ({
   error: {
     fontSize: '12px',
     color: 'red'
+  },
+  button: {
+    width: '130px',
+    height: '50px',
+    borderRadius: '40px',
+    padding:'5px',
   }
 
   

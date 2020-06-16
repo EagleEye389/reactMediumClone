@@ -3,10 +3,7 @@ import { withStyles }  from '@material-ui/styles'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { NavLink } from 'react-router-dom'
-import  faHome from '@fortawesome/free-solid-svg-icons/faHome'
-import  faBook from '@fortawesome/free-solid-svg-icons/faBook'
-import  faUser from '@fortawesome/free-solid-svg-icons/faUser'
-import  faSignOutAlt from '@fortawesome/free-solid-svg-icons/faSignOutAlt'
+import  { faHome, faBook, faUser, faSignOutAlt, faIdBadge } from '@fortawesome/free-solid-svg-icons'
 
 import logo from '../../../assests/image/logo.png'
 import Button from '../../common/components/Button'
@@ -29,7 +26,7 @@ const Header = ({classes,logout, isLoggedIn, username}) => {
              { isLoggedIn && <li><NavLink to="/editor" ><Button icon={faBook } isVisible={isLoggedIn} text="New Article"/> </NavLink></li> }
              { isLoggedIn && <li><NavLink to="/profile" ><Button icon={faUser } isVisible={isLoggedIn} text="Profile"/> </NavLink></li>}
              { ! isLoggedIn && <li><NavLink to="/auth" ><Button icon={faSignOutAlt } isVisible={!isLoggedIn} text="SignIn"/> </NavLink></li> }
-             { isLoggedIn && <li className={classes.username}><NavLink to={`/userProfile/${username}`} ><Button isVisible={isLoggedIn} text="My Page"/> </NavLink></li> }
+             { isLoggedIn && <li className={classes.username}><NavLink to={`/userProfile/${username}`} ><Button icon={faIdBadge} isVisible={isLoggedIn} text="My Page"/> </NavLink></li> }
              <li className={classes.log}><NavLink to="#" ><Button icon={faSignOutAlt } isVisible={isLoggedIn} text="Logout" clickHandler={logout}/> </NavLink></li>
            </ul>
         

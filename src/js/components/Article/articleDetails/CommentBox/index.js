@@ -1,7 +1,7 @@
 import React from 'react'
 import { withStyles }  from '@material-ui/styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import  faTrashAlt  from '@fortawesome/free-solid-svg-icons/faTrashAlt'
+import  { faTrashAlt }   from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 import defaultImage  from '../../../../../assests/image/profile.jpg'

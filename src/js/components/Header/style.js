@@ -13,9 +13,12 @@ const style = () => ({
      }
    },
    text: {
-     textShadow: '2px 3px 5px darkgreen',
-     color: 'lightgreen',
+     textShadow: '2px 3px 5px darkgrey',
+     color: 'black',
      fontSize: '2rem',
+     '@media only screen and (max-width: 1000px)':{ 
+        display: 'none'
+     }
    },
    option: { 
      display: 'flex',

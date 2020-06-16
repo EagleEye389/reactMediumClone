@@ -37,7 +37,7 @@ const style = () => ({
     '&>img':{
       width: 'inherit',
       height: 'inherit',
-      borderRadius: 'inherit%',
+      borderRadius: 'inherit',
     }
   },
   deleteButton: {

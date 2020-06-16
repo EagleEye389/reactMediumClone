@@ -3,8 +3,7 @@ import { withStyles }  from '@material-ui/styles'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import faHeart from '@fortawesome/free-solid-svg-icons/faHeart'
-import faPlus from '@fortawesome/free-solid-svg-icons/faPlus'
+import { faHeart,faPlus} from '@fortawesome/free-solid-svg-icons'
 
 import { Redirect } from 'react-router-dom'
 

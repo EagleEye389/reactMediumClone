@@ -16,7 +16,7 @@ const style = () => ({
     },
     '&:hover':{
       boxShadow: '-5px -5px 5px  5px lightgrey',
-      border: '1px solid green',
+      border: '1px solid lightgrey',
     }
   },
   title: {
@@ -24,7 +24,7 @@ const style = () => ({
     overflow: 'hidden',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    color: 'green'
+    color: 'black'
   },
   body: {
     fontSize: '12px',
@@ -58,12 +58,13 @@ const style = () => ({
     fontSize: '14px',
     '&>a': {
       textDecoration: 'none',
-      color: 'green'
+      color: 'black'
     },
   },
   createdDate: {
     fontWeight: '100',
     fontSize: '8px',
+    color: 'lightgray'
   },
 
 })

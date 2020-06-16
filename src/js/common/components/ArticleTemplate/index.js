@@ -2,9 +2,11 @@ import React from 'react'
 import { withStyles }  from '@material-ui/styles'
 import style from './style'
 
-const ArticleTemplate = ({classes, isEdit, title, description, body, tagList, handler, submitHandler }) => {
+const ArticleTemplate = ({classes, 
+     isEdit, title, description, cancelHandler,
+     body, tagList, handler, submitHandler }) => {
   return (
-   <div className={classes.box}>
+   <div className={classes.box}><form>
         <div className={classes.field}>
                  <div className={classes.label}>
                     <span>Title</span>
@@ -63,8 +65,9 @@ const ArticleTemplate = ({classes, isEdit, title, description, body, tagList, ha
              <div className={classes.btn} >
                 <button onClick={($event) => submitHandler($event) } >
                   { isEdit ? "Re-Publish" : "Publish" }</button> 
-                 {isEdit && <button onClick={($event) => submitHandler($event) } >Cancel</button> }
+                 {isEdit && <button onClick={ cancelHandler} >Cancel</button> }
              </div>
+             </form>
        </div>
   )
 }

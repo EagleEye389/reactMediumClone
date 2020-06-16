@@ -5,7 +5,7 @@ import style from './style'
 const Loader = ({classes,isLoading}) => {
   return (
     isLoading && <div className={classes.box}>
-         ...Loading
+         Loading...
        </div>
   )
 }

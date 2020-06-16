@@ -116,8 +116,11 @@ class Profile extends Component {
                     onChange={($event) => this.Handler($event)}
                     defaultValue={password}/>
                   </div>
-                <div className={classes.field}> 
-                  <button onClick={($event) => this.submitHandler($event)}>Update Settings</button>
+                <div className={classes.button}> 
+                  <Button 
+                    isVisible
+                   clickHandler={($event) => this.submitHandler($event)}  
+                   text="Update Settings" />
                 </div>
 
              </div>

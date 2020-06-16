@@ -48,14 +48,14 @@ const style = () => ({
     '&>button': {
       width: '100px',
       height: 'inherit',
-      background: 'chartreuse',
+      background: 'darkgray',
       border: 'none',
       outline: 'none',
       fontSize: '14px',
       fontWeight: 'bolder',
       borderRadius: '13px',
-      boxShadow: '2px 2px 2px 2px darkgreen',
-      color: 'darkblue',
+      boxShadow: '2px 2px 15px 2px darkgray',
+      color: 'black',
       marginRight: '10px'
     }
   }

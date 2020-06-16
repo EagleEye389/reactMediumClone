@@ -10,16 +10,17 @@ const style = () => ({
     boxShadow: '5px 5px 2px #f4f4f4',
     marginRight: '20px',
     transition:'1s',
+    background: 'transparent',
     borderRadius: 'inherit',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-evenly',
     '&:hover': {
-      boxShadow: '-2px -2px 3px 2px #f4f4f4',
+      boxShadow: '-2px -2px 5px 2px #f4f4f4',
     }
   },
   primary: {
-    border: '1px solid lightgreen',
+    border: '1px solid lightgrey',
   },
   secondary: {
     border: '1px solid red',

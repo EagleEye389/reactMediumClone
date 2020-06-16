@@ -21,6 +21,7 @@ const Article = ({article, classes}) => {
          <NavLink to={`/article/${article.slug}`} activeStyle={{
             textDecoration: 'none',
             outline: 'none',
+            color: 'lightgray'
           }} >
             Read More...</NavLink></div> } 
         <div className={classes.details}>

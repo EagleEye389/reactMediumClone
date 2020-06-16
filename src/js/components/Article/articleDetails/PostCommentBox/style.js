@@ -11,11 +11,15 @@ const style = () => ({
     height: '30px',
   },
   button: {
-   background: '#5cb85c',
-   border: '#5cb85c',
+   background: 'lightgray',
+   border: 'lightgray',
    borderRadius:'10px',
    width: '100%',
    height: '100%',
+   transition: '1s',
+   '&:hover':{
+     boxShadow: '2px 2px 5px lightgray'
+   }
   },
   inputBox: {
    padding: '5px',

@@ -47,8 +47,11 @@ class EditArticle extends Component{
       })
     }
   }
-  cancelHandler = (slug) => {
-    return <Redirect to={`/article/${slug}`} />
+
+  cancelHandler = ($event) => {
+    $event.preventDefault()
+    const { match: {params: {slug}}, history } = this.props
+    return history.replace(`/article/${slug}`)
   }
   submitHandler = ($event) => {
       const { publishArticle, tokenValue } = this.props
@@ -87,7 +90,7 @@ class EditArticle extends Component{
             submitHandler={this.submitHandler}
             handler={this.handler}
             isEdit={isEdit}
-            cancelHandler={() => this.cancelHandler(publishArticleSlug)}
+            cancelHandler={($event) => this.cancelHandler($event)}
             />
             
    </>)

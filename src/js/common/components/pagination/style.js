@@ -30,7 +30,9 @@ const style = () => ({
     cursor: 'pointer',
   },
   active: {
-    background: '#44EEAA',
+    background: 'darkgray',
+    boxShadow: '2px 2px 1px lightgrey',
+    border: '1px solid lightgray'
   }
 
 })
