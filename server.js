@@ -5,7 +5,6 @@ const port = process.env.PORT || 3001
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.get('*.js', function(req, res, next) {
-  console.log('gzip is loading')
   req.url = req.url + '.gz';
   res.set('Content-Encoding', 'gzip');
   res.set('Content-Type', 'text/javascript');
