@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import  withStyles  from '@material-ui/core/styles/withStyles'
+import { withStyles }  from '@material-ui/styles'
 import classnames from 'classnames'
 import style from './style'
  class Pagination extends Component{

@@ -1,5 +1,5 @@
 import React, { Component} from 'react'
-import  withStyles  from '@material-ui/core/styles/withStyles'
+import { withStyles }  from '@material-ui/styles'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

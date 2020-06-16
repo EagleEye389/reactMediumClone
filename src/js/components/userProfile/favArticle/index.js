@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import  withStyles  from '@material-ui/core/styles/withStyles'
+import { withStyles }  from '@material-ui/styles'
 
 import Article from '../../Article'
 import Loader from '../../../common/components/loader'

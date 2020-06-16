@@ -96,10 +96,10 @@ function *publishArticle({payload}){
 }
 
 function *deleteArticleComment({payload}){
-  const {  id, slug,tokenValue } = payload
-  const { data, error} = yield call(deleteArticleApi, slug,tokenValue)
+  const {  slug,tokenValue } = payload
+  const { data, error} = yield call(deletePostCommentApi, slug,tokenValue)
   if(data) {
-    yield put({type: POST_DELETE_ARTICLE_SUCCESS})
+    yield put({type: POST_DELETE_COMMENT_SUCCESS})
   }
   if(error){
     yield put({type: FAIL ,payload: {

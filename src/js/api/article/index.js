@@ -70,6 +70,6 @@ export const deleteArticleApi = (slug, tokenValue) => {
    const url = `/articles/${slug}`
    const headers = Header(tokenValue)
    return  API.delete(url,{headers})
-        .then(({data}) =>  ({"data" : true}))
+        .then(() =>  ({"data" : true}))
         .catch(({response: {data}}) => ({ error: data.error || 'Internal server error' }))
 }

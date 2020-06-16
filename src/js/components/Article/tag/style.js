@@ -7,8 +7,6 @@ const style = () => ({
   },
 tag: {
     textAlign: 'center',
-    fontSize: '10px',
-    background: 'lightgray',
     fontWeight: '500',
     width: 'auto',
     height: '18px',

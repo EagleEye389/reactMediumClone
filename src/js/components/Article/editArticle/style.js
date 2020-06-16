@@ -1,7 +1,6 @@
 const style = () => ({
   box: {
     margin: '15px',
-    padding: '10px',
     border: '1px solid lightsteelblue',
     boxShadow: '5px 5px 5px  5px lightsteelblue',
     width: '100%',

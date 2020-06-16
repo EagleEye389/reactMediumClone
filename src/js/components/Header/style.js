@@ -34,9 +34,6 @@ const style = () => ({
        }
      }
    },
-   log: {
-     
-   }
   })
   
   export default style

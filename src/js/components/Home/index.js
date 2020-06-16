@@ -1,7 +1,7 @@
 import React, { Component} from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import  withStyles  from '@material-ui/core/styles/withStyles'
+import { withStyles }  from '@material-ui/styles'
 
 import feedAction from '../../actionCreators/feedAction'
 import Pagination from '../../common/components/pagination'

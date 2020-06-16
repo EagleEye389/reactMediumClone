@@ -7,17 +7,25 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
+    devtool: 'none',
     optimization: {
       minimizer: [new UglifyJsPlugin()],
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          vendors: {
+            test: /[\\/]node_modules[\\/]/, ///< put all used node_modules modules in this chunk
+            name: "vendor", ///< name of bundle
+            chunks: "all" ///< type of code to put in this bundle
+          }
+        },
+     },
+  
     },
     plugins: [
-      new CompressionPlugin(),
-      new MiniCssExtractPlugin({
-        // Options similar to the same options in webpackOptions.output
-        // all options are optional
-        filename: '[name].css',
-        chunkFilename: '[id].css',
-        ignoreOrder: false, // Enable to remove warnings about conflicting order
+      new CompressionPlugin({
+        algorithm: 'gzip',
+        test: /\.js(\?.*)?$/i,
       }),
     ]
    });

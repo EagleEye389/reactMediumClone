@@ -3,14 +3,11 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-  devtool: 'none',
-  mode: 'production',
+  devtool: 'inline-cheap-source-map',
+  mode: 'development',
   devServer: {
     historyApiFallback: {
       disableDotRule: true
     },
   },
-  plugins: [
-    new BundleAnalyzerPlugin(),
-  ]
 })

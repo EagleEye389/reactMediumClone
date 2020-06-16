@@ -5,7 +5,7 @@ export const getProfileApi = (tokenValue) => {
   const headers = Header(tokenValue)
   return API.get(`/user`, { headers })
       .then(({data}) =>  ({"data" : data.user}))
-   .catch(({ response: { data } }) => ({ error: 'Internal server error' }))
+   .catch(({ response: { data } }) => ({ error: data.errors || 'Internal server error' }))
 
 }
 

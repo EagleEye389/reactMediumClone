@@ -1,8 +1,8 @@
 import React from 'react'
-import  withStyles  from '@material-ui/core/styles/withStyles'
+import { withStyles }  from '@material-ui/styles'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Link,NavLink, Redirect } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import  faHome from '@fortawesome/free-solid-svg-icons/faHome'
 import  faBook from '@fortawesome/free-solid-svg-icons/faBook'
 import  faUser from '@fortawesome/free-solid-svg-icons/faUser'
@@ -10,7 +10,6 @@ import  faSignOutAlt from '@fortawesome/free-solid-svg-icons/faSignOutAlt'
 
 import logo from '../../../assests/image/logo.png'
 import Button from '../../common/components/Button'
-import { Authenticate } from '../../common/components/hoc/authenticate'
 
 import style from './style'
 
@@ -20,7 +19,7 @@ const Header = ({classes,logout, isLoggedIn, username}) => {
   return (
     <div className={classes.box}>
       <div className={classes.logo}>
-          <Link to="/"><img src={logo} /></Link>
+          <NavLink to="/"><img src={logo} /></NavLink>
       </div>
       <div className={classes.text}> Share your ideas</div>
       <div className={classes.option}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import  withStyles  from '@material-ui/core/styles/withStyles'
+import { withStyles }  from '@material-ui/styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import  faTrashAlt  from '@fortawesome/free-solid-svg-icons/faTrashAlt'
 import { Link } from 'react-router-dom'

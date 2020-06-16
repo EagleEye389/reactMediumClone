@@ -1,5 +1,4 @@
 import API from '../api'
-import { Header, ObjectToArray } from '../../helper'
 
 export const getUserProfileApi = (username) => {
   return API.get(`/profiles/${username}`,)

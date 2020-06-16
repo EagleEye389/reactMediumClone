@@ -1,5 +1,5 @@
-import React, {Component } from 'react'
-import  withStyles  from '@material-ui/core/styles/withStyles'
+import React from 'react'
+import { withStyles }  from '@material-ui/styles'
 import style from './style'
 
 const Loader = ({classes,isLoading}) => {

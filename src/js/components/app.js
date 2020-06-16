@@ -1,5 +1,4 @@
 import React, { Component, lazy, Suspense } from 'react'
-import ActionCreator  from '../actionCreators/loginAction'
 import {
   Switch,
   Route,
@@ -14,7 +13,6 @@ import Header from '../components/Header'
 import profileAction from '../actionCreators/profileAction'
 import loginAction from '../actionCreators/loginAction'
 
-import { Authenticate } from '../common/components/hoc/authenticate'
 import  './app.css'
 
 const Login =  lazy(() => import('./Login'));

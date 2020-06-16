@@ -1,6 +1,6 @@
 import React from 'react'
-import  withStyles  from '@material-ui/core/styles/withStyles'
-import { Link, NavLink } from 'react-router-dom'
+import { withStyles }  from '@material-ui/styles'
+import { NavLink } from 'react-router-dom'
 
 import style from './style'
 
