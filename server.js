@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const port = process.env.PORT || 3001
-const history =  require('connect-history-api-fallback')()
+const history =  require('connect-history-api-fallback')
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(history({
