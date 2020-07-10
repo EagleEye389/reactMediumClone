@@ -54,6 +54,7 @@ class EditArticle extends Component{
     return history.replace(`/article/${slug}`)
   }
   submitHandler = ($event) => {
+      $event.preventDefault()
       const { publishArticle, tokenValue } = this.props
       const { title, description, body, tagList} = this.state
       const publishArticleObject = {
