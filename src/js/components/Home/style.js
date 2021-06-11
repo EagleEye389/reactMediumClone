@@ -1,8 +1,13 @@
+
 const style = () => ({
 container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+  width: '100vw',
+  height: '100%',
+  display: 'grid',
+  gridGap: '10px',
+  gridTemplateColumns: '1fr',
+  gridTemplateRows: '1fr 200px',
+  justifyContent: 'center'
 },
 box: {
     margin: '5px',
@@ -14,11 +19,22 @@ box: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    background: 'transparent'
+    background: 'transparent',
   },
 pagination: {
     display:'flex',
-  }
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+'@media screen and (max-width: 768px)':{
+    box: {
+      display: 'grid',
+      gridTemplateColumns: '1fr',
+      width: '80%',
+      margin: '0 auto',
+      gridGap: '1.5em',
+  },
+}
 })
 
 export default style

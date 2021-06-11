@@ -12,6 +12,7 @@ const style = () => ({
         border: 'none',
         outline: 'none',
         background: 'transparent',
+        fontSize: '12px',
       },
     }, 
 
@@ -33,7 +34,21 @@ const style = () => ({
     background: 'darkgray',
     boxShadow: '2px 2px 1px lightgrey',
     border: '1px solid lightgray'
-  }
+  },
+  '@media only screen and (max-device-width: 425px)':{
+    btn: {
+      width: '4.5em',
+      height: '4.5em',
+
+    },
+    list : { 
+      '&>li' : {
+        '&>button:nth-child(1)': {
+          fontSize: '2em',
+        }
+      }
+    }
+  },
 
 })
 

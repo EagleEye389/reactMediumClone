@@ -1,11 +1,13 @@
+import { withTheme } from "@material-ui/core"
+
 const style = () => ({
   box: {
-    width: '450px',
-    height: '190px',
+    width: '80%',
+    height: '250px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    background: "gray",
+    background: "lightgray",
     margin: '20px'
   },
   textarea: {
@@ -14,7 +16,8 @@ const style = () => ({
      padding: '20px',
      boxSizing: 'border-box',
      resize: 'none',
-     background:'#fff'
+     background:'#fff',
+     fontSize: '2em',
   },
   inputBox: {
     width: '100%',
@@ -27,6 +30,11 @@ const style = () => ({
     alignItems: 'flex-start',
     position: 'relative',
     marginTop: '10px',
+    fontSize: '2em',
+    '&  a': {
+      textDecoration: 'none',
+      color: 'black',
+    },
   },
   image: {
     width: '21px',
@@ -34,6 +42,7 @@ const style = () => ({
     padding: '0px',
     margin: '0 20px',
     borderRadius: '50%',
+    
     '&>img':{
       width: 'inherit',
       height: 'inherit',

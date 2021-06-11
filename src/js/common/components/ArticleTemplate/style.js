@@ -2,22 +2,21 @@ const style = () => ({
   box: {
     margin: '15px',
     border: '1px solid #fff',
-    boxShadow: '5px 5px 5px  5px lightgrey',
     width: '100%',
     minHeight: '500px',
     borderRadius: '5px',
     position: 'relative',
     padding: '5%',
     boxSizing: 'border-box',
-    fontFamily: 'cursive'
+    fontFamily: 'cursive',
   },
   field: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    fontSize: '14px',
+    fontSize: '1.5em',
     fontWeight: 'bolder',
-    marginTop: '10px'
+    marginTop: '1em'
   },
   label: {
      flex: '2',
@@ -29,7 +28,7 @@ const style = () => ({
       height: '20%',
       outline: 'none',
       padding: '12px',
-      fontSize: '20px',
+      fontSize: '1.5em',
       boxSizing: 'content-box',
       border: 'none',
       borderBottom: '1px solid grey'
@@ -40,7 +39,7 @@ const style = () => ({
     }
   },
   btn: {
-    height: '40px',
+    height: '70px',
     width: '100%',
     display: 'flex',
     margin: '20px',
@@ -51,15 +50,14 @@ const style = () => ({
       background: 'darkgray',
       border: 'none',
       outline: 'none',
-      fontSize: '14px',
+      fontSize: '1.5em',
       fontWeight: 'bolder',
       borderRadius: '13px',
       boxShadow: '2px 2px 15px 2px darkgray',
       color: 'black',
       marginRight: '10px'
     }
-  }
-
+  },
 })
 
 export default style

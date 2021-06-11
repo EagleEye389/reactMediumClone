@@ -33,12 +33,15 @@ const style = () => ({
       boxSizing: 'border-box',
       alignItems: 'center',
       '&>button': {
-        marginRight: '20px',
-        marginTop: '10px',
-        height: '100%',
         border: 'none',
-        outline: 'none',
-        background: 'transparent',
+    background: 'transparent',
+    marginRight: '1em',
+    transition: '.3s',
+    outline: 'none',
+    textShadow: '0.1em 0.1em 0.3em #d3d3d3',
+    fontSize: '1.1em',
+    letterSpacing: '.05rem',
+    fontVariant: 'petite-caps',
       }
     },
     active: {

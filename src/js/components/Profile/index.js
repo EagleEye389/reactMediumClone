@@ -42,7 +42,8 @@ class Profile extends Component {
     }
 
     Handler = ($event) => {
-      const { name, value }= $event.target
+      const { name, value } = $event.target
+      console.log(name, value);
       this.setState({
         [name]: value
       })
@@ -86,8 +87,10 @@ class Profile extends Component {
                 <div className={classes.field}>
                   <input 
                     type="text" 
+                    placeholder="Username"
                     name="username" 
-                    defaultValue={username} placeholder="Username"
+                    defaultValue={username} 
+                    autoComplete="off"
                     onChange={($event) => this.Handler($event)}
                     />
                 </div>
@@ -113,8 +116,9 @@ class Profile extends Component {
                     type="password" 
                     placeholder="New Password" 
                     name="password" 
+                    defaultValue={password}
                     onChange={($event) => this.Handler($event)}
-                    defaultValue={password}/>
+                    />
                   </div>
                 <div className={classes.button}> 
                   <Button 

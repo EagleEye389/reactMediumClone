@@ -6,6 +6,7 @@ const styles = () => ({
     display: 'flex',
     alignItems: 'center',
     padding: '20px',
+    width: '100%',
   },
   box: {
     position: 'relative',
@@ -57,7 +58,7 @@ imgBx: {
        textAlign: 'center',
        fontWeight: '600',
        letterSpacing: '2px',
-       fontSize: '18px',
+       fontSize: '20px',
        marginBottom: '10px',
        color: '#555'
      },
@@ -70,7 +71,7 @@ imgBx: {
         background: '#f5f5f5',
         color: '#333',
         margin: '8px 0',
-        fontSize: '18px',
+        fontSize: '20px',
         letterSpacing: '1px',
         fontWeight: '300',
         boxSizing: 'border-box',
@@ -89,12 +90,12 @@ imgBx: {
     errorBox: {
       position: 'relative',
       color: 'red !important',
-      fontSize: '12px',
+      fontSize: '2em',
      },
     signUp: {
       position: 'relative',
       marginTop: '20px',
-      fontSize: '12px',
+      fontSize: '16px',
       letterSpacing: '1px',
       textTransform: 'uppercase',
       fontWeight: '300',
@@ -105,15 +106,24 @@ imgBx: {
       }
     },
     '@media(max-width:991px)' : {
-        box: {
-          maxWidth: '400px'
-        },
+       
         imgBx: {
           display: 'none'
         },
         formBx: {
           width:  '100%'
         },
+    },
+
+    '@media screen and (max-width: 768px)' : {
+      formBx:{
+        '&>form input': {
+          fontSize: '2em',
+        }
+      },
+      signUp: {
+        fontSize: '2em',
+      }
     }
 
 })

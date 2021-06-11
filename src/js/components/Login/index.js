@@ -151,7 +151,7 @@ const mapDisptachToProps = (dispatch) => {
     registerMethod: loginAction.registerProcess
   },dispatch)
 }
-export default withStyles(styles)(connect(
+export default connect(
   mapStateToProps,
   mapDisptachToProps
-)(Authenticate(Login)))
+)(Authenticate(withStyles(styles)(Login)))

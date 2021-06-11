@@ -72,11 +72,12 @@ const style = () => ({
     marginTop: '20px',
     padding: '16px',
     boxShadow: '0px -2px 2px 0px lightgrey, 0px 2px 2px 0px lightgrey',
-    fontSize: '16px',
+    fontSize: '2em',
     fontFamily: 'cursive'
   },
   comment: {
     marginTop: '20px',
+    fontSize: '2em',
   },
   commentData: {
     display: 'flex',
@@ -88,7 +89,25 @@ const style = () => ({
     fontSize: '14px',
   },
   error: {
-    color: 'red'
+    color: 'red',
+    fontSize: '2em'
+  },
+  '@media only screen and (max-device-width: 425px)':{ 
+    header: {
+      height: '30%',
+      fontSize: '2em',
+    },
+    userImage: {
+      width: '3em',
+      height: '3em',
+    },
+    options: { 
+      '& button': {
+        width: '220px',
+        height: '60px',
+        fontSize: '0.9em',
+      }
+    },
   }
 
 

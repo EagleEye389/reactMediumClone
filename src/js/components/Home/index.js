@@ -53,7 +53,6 @@ class Home extends Component {
     else if(value === 'prev') {
       const { currentPage, totalItem } = this.state
       if(currentPage > 1 ){
-       const itemsRemaining =  totalItem - currentPage*this.itemOnPerPage
        if((currentPage -1) % 3 === 0)
          this.setState({
            currentPage:  currentPage -1,
@@ -72,7 +71,6 @@ class Home extends Component {
     else if(value === 'next'){
      const { currentPage, totalItem } = this.state
      const { fetchMoreFeed} = this.props
-     const newLen = totalItem+currentPage * this.itemOnPerPage
      if(totalItem > currentPage * this.itemOnPerPage){
       this.setState({
             currentPage: currentPage + 1,
@@ -113,7 +111,7 @@ class Home extends Component {
     )
    }
 }
-const mapStateToProps = (state, ownprops) => {
+const mapStateToProps = (state) => {
    return {
      articles: state.Feed.articles, 
      error:  state.Feed.error,

@@ -7,13 +7,14 @@ const style = () => ({
     alignItems: 'center',
   },
   postButton: {
-    width: '120px',
-    height: '30px',
+    width: '30%',
+    height: '72px',
   },
   button: {
    background: 'lightgray',
    border: 'lightgray',
    borderRadius:'10px',
+   fontSize: '1em',
    width: '100%',
    height: '100%',
    transition: '1s',
@@ -29,8 +30,9 @@ const style = () => ({
    '&>textarea': {
      width: '80%',
      padding: '20px',
-     fontSize: '14px',
+     fontSize: '1.5em',
      fontWeight: 'bold',
+     border: '1px solid',
    }
   }
 })

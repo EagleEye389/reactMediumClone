@@ -1,27 +1,67 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import { withStyles }  from '@material-ui/styles'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { NavLink } from 'react-router-dom'
-import  { faHome, faBook, faUser, faSignOutAlt, faIdBadge } from '@fortawesome/free-solid-svg-icons'
+import  { faHome, faBook, faUser, faSignOutAlt, faIdBadge , faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import classNames from "classnames";
+
 
 import logo from '../../../assests/image/logo.png'
 import Button from '../../common/components/Button'
 
 import style from './style'
 
-
+const MOBILE_WIDTH = 768;
 
 const Header = ({classes,logout, isLoggedIn, username}) => {
+const [isOpen, isOpenHandler ] =  useState(false);
+const [isMobile, isMobileHandler] =  useState(false);
+
+
+useEffect(() => {
+
+  function handleResize() {
+    const width = window.screen.width;
+    console.log('width', width);
+    console.log('isOpen ', isOpen);
+    console.log('isMobile ', isMobile);
+    if(width <= MOBILE_WIDTH){
+      isMobileHandler(true);
+    } else {
+      isMobileHandler(false);
+    }
+  }
+  handleResize();
+  window.addEventListener('resize', handleResize);
+  return () => {
+    window.removeEventListener('resize', handleResize) }
+  
+}, [isOpen])
+
+
   return (
+    
     <div className={classes.box}>
-      <div className={classes.logo}>
-          <NavLink to="/"><img src={logo} /></NavLink>
+      <div className={classes.header}>
+          <div className={classes.logo}>
+            <NavLink to="/"><img src={logo} /></NavLink>
+            <div className={classes.text}> Share your ideas</div>
+           </div>
+     
+         { isMobile && <div className={classNames(`${classes.Icon}`)} onClick={() =>isOpenHandler(!isOpen)}>
+              <FontAwesomeIcon icon={faBars} /> 
+          </div> 
+          }
       </div>
-      <div className={classes.text}> Share your ideas</div>
-      <div className={classes.option}>
-         
-           <ul>
+      
+      <div className={` ${isMobile ?  classes.optionMobile : classes.optionDesktop }  ${isOpen ?  classes.mobile : ''}`} >
+      
+      { isMobile && <div className ={classes.Icon} onClick={() =>isOpenHandler(!isOpen)} >
+           <FontAwesomeIcon icon={faTimes} /> 
+        </div>
+       }
+           <ul  onClick={() =>isOpenHandler(!isOpen)}>
              <li><NavLink to="/" ><Button icon={faHome } isVisible text="Home"/></NavLink></li>
              { isLoggedIn && <li><NavLink to="/editor" ><Button icon={faBook } isVisible={isLoggedIn} text="New Article"/> </NavLink></li> }
              { isLoggedIn && <li><NavLink to="/profile" ><Button icon={faUser } isVisible={isLoggedIn} text="Profile"/> </NavLink></li>}
@@ -35,7 +75,7 @@ const Header = ({classes,logout, isLoggedIn, username}) => {
     
   )
 }
-const mapStateToProps = (state, ownprops) => {
+const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.Profile.user ||  state.Auth.isLoggedInCheck,
     username:  (state.Profile.user ? state.Profile.user.username :null) || (state.Auth.user ? state.Auth.user.username: null)

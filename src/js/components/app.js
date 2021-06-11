@@ -81,9 +81,9 @@ class App extends Component {
            </Switch>
            </Suspense>
            </div>
-           <div className="footer">
-              @copyright deepak gupta
-           </div>
+           <footer>
+             <p>@Copyright John</p> 
+           </footer>
         </div>
       )
   }

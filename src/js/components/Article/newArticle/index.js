@@ -57,8 +57,7 @@ class NewArticle extends Component{
   }
 
  render() {
-   console.log('rendering started')
-   const {classes, canModify,isEdit, isLoggedIn,publishArticleSlug, isPublished, publishedArticle} = this.props
+   const { isLoggedIn,publishArticleSlug, isPublished} = this.props
    const { title, description, body, tagList} = this.state
    return (
       <>
