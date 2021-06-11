@@ -67,8 +67,7 @@ class MyArticle extends Component {
     }
     else if(value === 'next'){
      const { currentPage, totalItem } = this.state
-     const { articles, getUserMoreArticle, username} = this.props
-     const newLen = totalItem+currentPage * this.itemOnPerPage
+     const { getUserMoreArticle, username} = this.props
      if(totalItem > currentPage * this.itemOnPerPage){
       this.setState({
             currentPage: currentPage + 1,

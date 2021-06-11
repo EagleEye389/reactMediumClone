@@ -1,19 +1,16 @@
 const style = () => ({
   box:{
+     fontSize: '12px',
+    },
+    pagination: {
       display: 'flex',
-      justifyContent: 'flex-start',
-      boxShadow: '2px 2px 2px lightgrey',
-      width: '100%',
-      height: 'auto',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      minHeight: '500px',
+      justifyContent: 'center',
       alignItems: 'center',
     },
     page: {
       display: 'flex',
       flexWrap: 'wrap',
-    }
+    },
 
   })
   

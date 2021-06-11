@@ -1,19 +1,18 @@
 const style = () => ({
   box:{
-      display: 'flex',
-      justifyContent: 'flex-start',
-      boxShadow: '2px 2px 2px lightgrey',
-      width: '100%',
-      height: 'auto',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      minHeight: '500px',
-      alignItems: 'center'
+     fontSize: '12px',
+     "& >p ": {
+       fontSize: '3em',
+     }
     },
     page: {
       display: 'flex',
       flexWrap: 'wrap',
-     flexDirection:'row',
+    },
+    pagination: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
     }
 
   })

@@ -3,7 +3,6 @@ const style = () => ({
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'flex-start',
-      boxShadow: '2px 2px 2px lightgrey',
       width: '100%',
       height: 'auto',
       minHeight: '500px',
@@ -13,11 +12,13 @@ const style = () => ({
       '&>img':{
         borderRadius: 'inherit',
         marginBottom: '5px',
+        width: '200px',
+        height: '200px',
       }
     },
     header: {
       background: 'gray',
-      height: '200px',
+      minHeight: '400px',
       color: 'white',
       display: 'flex',
       justifyContent: 'center',
@@ -32,6 +33,7 @@ const style = () => ({
       marginLeft:'20px',
       boxSizing: 'border-box',
       alignItems: 'center',
+      fontSize: '2em',
       '&>button': {
         border: 'none',
     background: 'transparent',
@@ -48,12 +50,15 @@ const style = () => ({
       color: 'green',
       borderBottom: '1px solid green !important',
     },
-    followBtn: {
+    user: {
       width: '100px',
       height: '30px',
-      '&>button':{
-        boxShadow: 'none'
-      }
+      fontSize: '2em',
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    data: {
+      marginTop: '3em',
     }
 
   })

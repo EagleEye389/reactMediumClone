@@ -11,7 +11,7 @@ const style = () => ({
   header: {
     display: 'inline-block',
     padding: '10px',
-    height: '135px',
+    height: '150px',
     boxShadow: '2px 2px 2px lightgrey',
     border: '2px outset lightgrey',
     boxSizing: 'border-box'
@@ -22,6 +22,8 @@ const style = () => ({
     margin: '5px',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    flexWrap: 'wrap',
+  
   },
   userImage: {
     borderRadius: '50%',
@@ -39,14 +41,16 @@ const style = () => ({
   },
   options: {
     display: 'flex',
+    marginTop: '0.35em',
     '& button': {
-      width: '120px',
-       height: '25px',
-       display: 'flex',
+      width: '230px',
+      height: '25px',
+      display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-evenly',
       borderRadius: '1rem',
-      background: 'transparent'
+      background: 'transparent',
+      textTransform: 'capitalize',
     }
   },
   follow: {
@@ -103,7 +107,7 @@ const style = () => ({
     },
     options: { 
       '& button': {
-        width: '220px',
+        width: '300px',
         height: '60px',
         fontSize: '0.9em',
       }

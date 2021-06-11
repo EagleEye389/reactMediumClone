@@ -2,8 +2,7 @@ import React, { Component} from 'react'
 import { withStyles }  from '@material-ui/styles'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart,faPlus} from '@fortawesome/free-solid-svg-icons'
+import { faHeart,faPlus, faPenAlt, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 
 import { Redirect } from 'react-router-dom'
 
@@ -103,12 +102,14 @@ class ArticleDetails extends Component{
                     <Button 
                      isVisible={canModify(article.author.username)  && isLoggedIn} 
                      text="Edit Article"
+                     icon={faPenAlt}
                      clickHandler={()=> this.editClickHandler(article.slug)} /> 
 
                      <Button 
                      isVisible={canModify(article.author.username) && isLoggedIn} 
                      text="Delete Article"
                      variant="secondary"
+                     icon={faTrashAlt}
                      clickHandler={()=>{deleteArticle(article.slug,tokenValue())}}
                     /> </>)
                 }

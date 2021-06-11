@@ -41,18 +41,9 @@ class UserProfile extends Component {
      })
    }
 
-   followHandler = () => {
-     const token = window.localStorage.getItem('token')
-     const { username, following, followUser, history } = this.props
-     if(token === null) {
-         history.replace("/auth")
-     } else  {
-     followUser(!following,username, token) 
-     }
-   }
 
    render() {
-     const { classes, isloading,handler,favArticles,following,
+     const { classes, isloading,handler,favArticles,
       articles,getUserMoreArticle, getUserFavArticle,error,
       getUserArticle, match: {params: { username }} }= this.props
      const { currentTab } = this.state
@@ -63,12 +54,8 @@ class UserProfile extends Component {
                 <div className={classes.image}>
                   <img src={defaultImage} />
                 </div>
-               <div className={classes.followBtn}>
-               <Button 
-                    icon={faPlus}
-                    text={ following ? " unfollow": "follow"} 
-                    isVisible
-                    clickHandler={this.followHandler} />
+               <div className={classes.user}>
+                 <p>{username}</p>
                </div>
             </div>
             <div className={classes.appBar}>
@@ -87,7 +74,7 @@ class UserProfile extends Component {
                      </button>
               </div>
             </div>
-            <div className={classes.tab}>
+            <div className={classes.data}>
               { currentTab === 0 && <MyArticle 
                    username={username} 
                    articles={articles}
@@ -115,7 +102,6 @@ const mapStateToProps = (state, ownprops) => {
     articles:  state.UserProfile.articles,
     isloading: state.UserProfile.isloading,
     favArticles:  state.UserProfile.favArticles,
-    following:  false || state.UserProfile.profile.following,
     username:  null || state.UserProfile.profile.username
   }
 }
@@ -125,7 +111,6 @@ const mapDisptachToProps = (dispatch) => {
     getUserArticle: userProfileAction.getUserArticle,
     getUserFavArticle: userProfileAction.getUserFavArticle,
     getUserMoreArticle: userProfileAction.getUserMoreArticle,
-    followUser:  userProfileAction.followUser,
     handler: userProfileAction.handler
   },dispatch)
 }
