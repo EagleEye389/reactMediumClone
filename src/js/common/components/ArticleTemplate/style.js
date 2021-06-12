@@ -39,15 +39,15 @@ const style = () => ({
     }
   },
   btn: {
-    height: '70px',
+    height: '50px',
     width: '100%',
     display: 'flex',
     margin: '20px',
     justifyContent: 'center',
+    paddingBottom: '2em',
     '&>button': {
-      width: '100px',
+      width: '150px',
       height: 'inherit',
-      background: 'darkgray',
       border: 'none',
       outline: 'none',
       fontSize: '1.5em',

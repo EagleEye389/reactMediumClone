@@ -22,9 +22,6 @@ const NewArticle = lazy(() => import('../components/Article/newArticle'));
 const EditArticle = lazy(() => import('../components/Article/editArticle'));
 const Profile = lazy(() => import('../components/Profile'));
 const UserProfile = lazy(() => import('../components/userProfile'));
-const LoadingMessage = () => (
-  "...fetching"
-  )
 
 class App extends Component {
     state = {

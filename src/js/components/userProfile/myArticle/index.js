@@ -47,9 +47,7 @@ class MyArticle extends Component {
     }
     else if(value === 'prev') {
       const { currentPage, totalItem } = this.state
-      const { articles } = this.props
       if(currentPage > 1 ){
-       const itemsRemaining =  totalItem - currentPage*this.itemOnPerPage
        if((currentPage -1) % 3 === 0)
          this.setState({
            currentPage:  currentPage -1,

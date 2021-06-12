@@ -1,6 +1,6 @@
 const style = () => ({
   box:{
-     fontSize: '12px',
+     fontSize: '16px',
     },
     pagination: {
       display: 'flex',

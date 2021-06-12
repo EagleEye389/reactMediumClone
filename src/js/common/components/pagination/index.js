@@ -24,7 +24,7 @@ import style from './style'
    }
 
    getPages() {
-    const { totalItem, currentPage,isforward } = this.props
+    const { currentPage,isforward } = this.props
     let x = []
    
       const start = currentPage

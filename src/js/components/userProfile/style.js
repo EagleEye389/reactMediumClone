@@ -42,7 +42,7 @@ const style = () => ({
     outline: 'none',
     textShadow: '0.1em 0.1em 0.3em #d3d3d3',
     fontSize: '1.1em',
-    letterSpacing: '.05rem',
+    letterSpacing: '.05em',
     fontVariant: 'petite-caps',
       }
     },

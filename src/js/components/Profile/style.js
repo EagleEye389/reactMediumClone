@@ -23,9 +23,11 @@ const styles = () => ({
       height: 'inherit',
       fontSize: '1.5em',
       padding: '10px',
+      border: 'none',
+      borderBottom: '1px solid',
+      outline: 'none',
     },
    '&>textarea': {
-     height: '100px',
      resize: 'none',
      padding: '10px',
      fontSize: '1.5em',

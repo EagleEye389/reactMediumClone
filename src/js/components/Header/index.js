@@ -23,9 +23,6 @@ useEffect(() => {
 
   function handleResize() {
     const width = window.screen.width;
-    console.log('width', width);
-    console.log('isOpen ', isOpen);
-    console.log('isMobile ', isMobile);
     if(width <= MOBILE_WIDTH){
       isMobileHandler(true);
     } else {

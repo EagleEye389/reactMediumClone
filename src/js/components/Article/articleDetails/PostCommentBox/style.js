@@ -8,13 +8,14 @@ const style = () => ({
   },
   postButton: {
     width: '30%',
-    height: '72px',
+    height: '50px',
+    fontSize: '12px',
   },
   button: {
    background: 'lightgray',
    border: 'lightgray',
    borderRadius:'10px',
-   fontSize: '1em',
+   fontSize: '2.5em',
    width: '100%',
    height: '100%',
    transition: '1s',

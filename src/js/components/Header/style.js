@@ -46,10 +46,6 @@ const style = () => ({
         display: 'flex !Important',
     },
 
-    text: {
-        fontSize: '3em'
-    },
-
     optionMobile: {
         height: '100%',
         width: '100%',
