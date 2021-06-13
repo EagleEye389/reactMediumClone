@@ -14,6 +14,7 @@ const store = mockStore({
     }
   },
   Auth: {
+    isLoggedIn: false,
     user: {
       username: 'John'
     }
@@ -28,12 +29,7 @@ describe("HeaderComponent", () => {
   it("should render 2 options", () => {
     const wrapper = mount( <Provider store={store}>
       <BrowserRouter><Header /></BrowserRouter>)</Provider>);
-    wrapper.setProps({
-      classes: {},
-      logout: () => {},
-      isLoggedIn: null,
-      username: null,
-    })
+   
     console.log(wrapper.debug());
     expect(wrapper.find("li").length).toBe(2);
   });

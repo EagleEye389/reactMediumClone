@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from "classnames";
 
 
-import logo from '../../../assests/image/logo.png'
+import {logo} from '../../../assests/image/logo.png'
 import Button from '../../common/components/Button'
 
 import style from './style'

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.11% </span>
+                <span class="strong">73.68% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/19</span>
+                <span class='fraction'>14/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.85% </span>
+                <span class="strong">69.23% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>14/26</span>
+                <span class='fraction'>18/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/8</span>
+                <span class='fraction'>4/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.11% </span>
+                <span class="strong">73.68% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/19</span>
+                <span class='fraction'>14/19</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -155,29 +155,29 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -228,7 +228,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from "classnames";
 &nbsp;
 &nbsp;
-import logo from '../../../assests/image/logo.png'
+import {logo} from '../../../assests/image/logo.png'
 import Button from '../../common/components/Button'
 &nbsp;
 import style from './style'
@@ -240,19 +240,19 @@ const [isOpen, isOpenHandler ] =  useState(false);
 const [isMobile, isMobileHandler] =  useState(false);
 &nbsp;
 &nbsp;
-useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+useEffect(() =&gt; {
 &nbsp;
-  function <span class="fstat-no" title="function not covered" >handleResize(</span>) {
-    const width = <span class="cstat-no" title="statement not covered" >window.screen.width;</span>
-<span class="cstat-no" title="statement not covered" >    if(width &lt;= MOBILE_WIDTH){</span>
-<span class="cstat-no" title="statement not covered" >      isMobileHandler(true);</span>
+  function handleResize() {
+    const width = window.screen.width;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(width &lt;= MOBILE_WIDTH){
+      isMobileHandler(true);
     } else {
 <span class="cstat-no" title="statement not covered" >      isMobileHandler(false);</span>
     }
   }
-<span class="cstat-no" title="statement not covered" >  handleResize();</span>
-<span class="cstat-no" title="statement not covered" >  window.addEventListener('resize', handleResize);</span>
-<span class="cstat-no" title="statement not covered" >  return <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+  handleResize();
+  window.addEventListener('resize', handleResize);
+  return <span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >    window.removeEventListener('resize', handleResize) </span>}
   
 }, [isOpen])
@@ -267,15 +267,15 @@ useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
             &lt;div className={classes.text}&gt; Share your ideas&lt;/div&gt;
            &lt;/div&gt;
      
-         { isMobile &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;div className={classNames(`${classes.Icon}`)} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt;<span class="cstat-no" title="statement not covered" >isOpenHandler(!isOpen)}</span>&gt;</span>
+         { isMobile &amp;&amp; &lt;div className={classNames(`${classes.Icon}`)} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt;<span class="cstat-no" title="statement not covered" >isOpenHandler(!isOpen)}</span>&gt;
               &lt;FontAwesomeIcon icon={faBars} /&gt; 
           &lt;/div&gt; 
           }
       &lt;/div&gt;
       
-      &lt;div className={` ${isMobile ?  <span class="branch-0 cbranch-no" title="branch not covered" >classes.optionMobile </span>: classes.optionDesktop }  ${isOpen ?  <span class="branch-0 cbranch-no" title="branch not covered" >classes.mobile </span>: ''}`} &gt;
+      &lt;div className={` ${isMobile ?  classes.optionMobile : classes.optionDesktop }  ${isOpen ?  <span class="branch-0 cbranch-no" title="branch not covered" >classes.mobile </span>: ''}`} &gt;
       
-      { isMobile &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;div className ={classes.Icon} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt;<span class="cstat-no" title="statement not covered" >isOpenHandler(!isOpen)}</span> &gt;</span>
+      { isMobile &amp;&amp; &lt;div className ={classes.Icon} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt;<span class="cstat-no" title="statement not covered" >isOpenHandler(!isOpen)}</span> &gt;
            &lt;FontAwesomeIcon icon={faTimes} /&gt; 
         &lt;/div&gt;
        }
@@ -307,7 +307,7 @@ export default connect(mapStateToProps,null)(withStyles(style)(Header))</pre></t
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Jun 13 2021 02:26:19 GMT+0530 (India Standard Time)
+                at Sun Jun 13 2021 14:55:27 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
